@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prediction</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css')}}">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <!-- <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<link rel="icon" type="image/x-icon" href="../static/img/croix.png">
+</head>
+<body>
+	<div class="container">
+		<div class="contact-box">
+			<div class="left"></div>
+			<div class="right">
+				{% if prediction == "indicates diabetes" %}
+					<h1 style="padding-top: 165px; padding-bottom: 130px;">
+						<b>Votre rapport indique la présence de diabète.</b>
+					</h1>
+				{% else %}
+					<h1 style="padding-top: 165px; padding-bottom: 130px;">
+						<b>Votre rapport indique que vous n'êtes pas atteint de diabète.</b>
+					</h1>
+				{% endif %}
+				<button class="btn" onclick="location.href = 'http://127.0.0.1:5000/';">
+					<b>Prédire de nouveau</b>
+				</button>
+				<button class="btn" onclick="location.href = '/diseases' ">Prediction des maladies</button>
+				<div style="padding-bottom: 0px;"></div>
+			</div>
+			
+		</div>
+	</div>
+</body>
+</html>

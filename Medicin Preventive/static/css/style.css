@@ -1,0 +1,219 @@
+/* Styles globaux */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+}
+
+/* Conteneur principal */
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 100px;
+}
+
+.container:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: url("../img/bg.png") no-repeat center;
+    background-size: cover;
+    filter: blur(50px);
+    z-index: -1;
+}
+
+/* Boîte de contact */
+.contact-box {
+    max-width: 850px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
+}
+
+.left {
+    background: url("../img/bg.png") no-repeat center;
+    background-size: cover;
+    height: 100%;
+}
+
+.right {
+    padding: 25px 40px;
+}
+
+body {  
+    margin: 0; /* Enlève les marges par défaut */  
+    height: 100vh; /* Utilise toute la hauteur de la fenêtre */  
+    display: flex; /* Utilise Flexbox */  
+    align-items: center; /* Centre horizontalement les enfants */  
+    justify-content: flex-start; /* Aligne les éléments au début (en haut) */  
+    font-family: Arial, sans-serif; /* Police par défaut */  
+}  
+
+.container {  
+    display: flex; /* Utilise Flexbox à l'intérieur de la .container */  
+    flex-direction: column; /* Aligne les éléments verticalement */  
+    align-items: center; /* Centre les éléments horizontalement dans la container */  
+    width: 100%; /* Prend toute la largeur de la fenêtre */  
+}  
+
+h2 {  
+    padding: 10px 0; /* Espace autour du titre */  
+    margin: 20px 0; /* Espace sous le titre */  
+    font-size: 4em; /* Agrandit la taille du texte (ajustez à votre goût) */  
+    font-weight: bold; /* Met le titre en gras */  
+    
+    /* Dégradé rose, noir et bordeaux */  
+    background: linear-gradient(to right, #ebdfe5, #000, #8B0000); /* Dégradé de rose à noir à bordeaux */  
+    background-clip: text; /* Clip de fond pour le texte */  
+    -webkit-background-clip: text; /* Clip de fond pour le texte (Safari) */  
+    color: transparent; /* Rendre le texte transparent pour afficher le dégradé */  
+}
+
+.back-button {  
+    margin-top: 20px; /* Ajoute de l'espace au-dessus du bouton */  
+}
+h2:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 50px;
+    border-radius: 2px;
+    background-color: #be1558;
+}
+
+/* Styles pour le tableau */  
+table {  
+    width: 100%;  
+    border-collapse: collapse;  
+    margin-top: 20px;  
+    background-color: rgba(255, 255, 255, 0.9);  
+    border-radius: 10px; /* Coins arrondis pour le tableau */  
+    overflow: hiddxen;  
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Ombre plus douce */  
+}  
+
+
+/* Cellules du tableau */  
+table, th, td {  
+    border: 1px solid #ddd; /* Bordures légèrement plus foncées */  
+    padding: 15px; /* Augmente le padding pour plus de confort */  
+    text-align: center;  
+    transition: background-color 0.3s; /* Ajout de la transition pour le survol */  
+}  
+
+th {  
+    background-color: #83ce86; /* Couleur d'arrière-plan du header */  
+    color: white;  
+    font-weight: bold;  
+    font-size: 1.2em; /* Taille de police améliorée pour le header */  
+    text-transform: uppercase; /* Mettre en majuscules */  
+    letter-spacing: 1px; /* Espacement des lettres pour un aspect stylé */  
+}  
+
+tr:nth-child(even) {  
+    background-color: rgba(242, 242, 242, 0.8); /* Couleur d'arrière-plan des lignes paires */  
+}  
+
+tr:hover {  
+    background-color: rgba(0, 0, 0, 0.1); /* Couleur d'arrière-plan au survol */  
+}  
+
+td {  
+    border-top: 1px solid #ddd; /* Ajoute une bordure supérieure pour plus de séparation */  
+}  
+
+/* Styles pour les champs de saisie et les boutons de façon cohérente */  
+.field {  
+    width: 100%;  
+    border: 2px solid rgba(0, 0, 0, 0);  
+    outline: none;  
+    background-color: rgba(230, 230, 230, 0.9);  
+    padding: 0.7rem 1rem; /* Ajustement pour un meilleur confort */  
+    font-size: 1.1rem;  
+    margin-bottom: 22px;  
+    transition: 0.3s;  
+    border-radius: 5px; /* Coins arrondis pour les champs de saisie */  
+}  
+
+.field:hover {  
+    background-color: rgba(0, 0, 0, 0.1);  
+}  
+textarea {  
+    min-height: 150px;  
+    border-radius: 5px; /* Coins arrondis pour les text areas */  
+}  
+
+/* Styles pour la classe .back-button consistant avec le style du bouton */  
+.back-button {  
+    display: inline-block;  
+    padding: 10px 20px;  
+    margin-top: 30px; /* Espacement pour séparer du tableau */  
+    background-color: #be1558; /* Couleur rose */  
+    color: white;  
+    text-decoration: none;  
+    border-radius: 5px;  
+    font-weight: bold;  
+    transition: 0.3s ease, transform 0.2s ease; /* Transition douce pour les effets */  
+    box-shadow: 0 4px 6px rgba(136, 6, 56, 0.1); /* Ombre */  
+}  
+
+.back-button:hover {  
+    background-color: #f1abce; /* Couleur plus claire au survol */  
+    transform: translateY(-2px); /* Légère élévation du bouton */  
+}  
+/* Bouton de classe .btn avec style amélioré */  
+.btn {  
+    display: inline-block;  
+    padding: 10px 20px;  
+    margin-top: 30px; /* Espacement pour séparer du tableau */  
+    background-color: #be1558; /* Couleur rose */  
+    color: white;  
+    text-decoration: none;  
+    border-radius: 5px;  
+    font-weight: bold;  
+    transition: 0.3s ease, transform 0.2s ease; /* Transition douce pour les effets */  
+    box-shadow: 0 4px 6px rgba(136, 6, 56, 0.1); /* Ombre */  
+}  
+	
+  
+
+.btn:hover {  
+	background-color: #f1abce; /* Couleur plus claire au survol */  
+    transform: translateY(-2px); /* Légère élévation du bouton */  
+} 
+
+/* Styles de mise au point */
+.field:focus {
+    border: 2px solid #3B0208;
+    background-color: #fff;
+}
+
+/* Responsive */
+@media screen and (max-width: 880px) {
+    .contact-box {
+        grid-template-columns: 1fr;
+    }
+    .left {
+        height: 200px;
+    }
+}

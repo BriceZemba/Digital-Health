@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prédictions des maladies</title>
+    <link rel="stylesheet" href="../static/css/result.css">
+    <link rel="icon" type="image/x-icon" href="../static/img/croix.png">
+</head>
+<body>
+    <main class="main-card">
+        <section id="disease-section">
+            <div class="disease-info">
+                <h1>{{d_name}}</h1>
+                <p>{{d_summary}}</p>
+            </div>
+        </section>
+        <section id="precaution-section">
+            <div class="precaution-list">
+                <h2>Précautions</h2>
+                <ul>
+                    {% for precaution in d_precautions %}
+                    <li >{{ precaution }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="piechart-img">
+                <img src="data:image/png;base64,{{ piechart_data }}" alt="Diagramme circulaire">
+            </div>
+        </section>
+    </main>
+</body>
+</html>
